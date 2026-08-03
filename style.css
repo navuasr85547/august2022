@@ -65,3 +65,11 @@ body {
         opacity: 1;
     }
 }
+.signature {
+    text-align: right;
+    margin-top: 60px;
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Brush Script MT", cursive;
+    color: #8b5e3c;
+}
