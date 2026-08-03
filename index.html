@@ -58,14 +58,22 @@ I kinda miss him now, knowing that I won't be able to see him for a really long 
 
         </div>
 
-    </div>
-<script>
-let password = prompt("What do you call me bruhhh?:");
+    </div> 
+    <div id="login">
+    <h2>What do you call me? 🐺</h2>
+    <input type="password" id="pass">
+    <button onclick="checkPassword()">Unlock Letter</button>
+     </div>
+<script> 
+    function checkPassword() {
+    let password = document.getElementById("pass").value;
 
-if(password === "husky"){
-    document.getElementById("letter").style.display = "block";
-}else{
-    document.body.innerHTML = "<h2>Wrong password!</h2>";
+    if (password.toLowerCase() === "husky") {
+        document.getElementById("letter").style.display = "block";
+        document.getElementById("login").style.display = "none";
+    } else {
+        alert("Wrong password!");
+    }
 }
 </script>
 </body>
