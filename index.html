@@ -69,7 +69,11 @@ I kinda miss him now, knowing that I won't be able to see him for a really long 
     let password = document.getElementById("pass").value;
 
     if (password.toLowerCase() === "husky") {
-        document.getElementById("letter").style.display = "block";
+        let letter = document.getElementById("letter");
+        letter.style.display = "block";
+        letter.classList.remove("unroll");
+        void letter.offsetWidth;
+        letter.classList.add("unroll");
         document.getElementById("login").style.display = "none";
     } else {
         alert("Wrong password!");
