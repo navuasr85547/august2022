@@ -211,6 +211,10 @@ hr {
 ========================= */
 
 .container {
+    animation: none;
+}
+
+.container.unroll {
     animation: unroll 2.5s ease-out forwards;
 }
 
