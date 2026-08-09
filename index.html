@@ -60,8 +60,14 @@ I kinda miss him now, knowing that I won't be able to see him for a really long 
 
     </div> 
     <div id="login">
+        
+    <audio id="bgm" loop>
+    <source src="happy-birthday-song.mp3" type="audio/mpeg">
+</audio>
+    
     <h2>🎁 A little birthday surprise...</h2>
 <p>But first... what do you call me bruhhhh? 🐺</p>
+        
     <input type="password" id="pass">
     <button onclick="checkPassword()">Open Your Letter ✨</button>
      </div>
@@ -70,12 +76,19 @@ I kinda miss him now, knowing that I won't be able to see him for a really long 
     let password = document.getElementById("pass").value;
 
     if (password.toLowerCase() === "husky") {
-        let letter = document.getElementById("letter");
-        letter.style.display = "block";
-        letter.classList.remove("unroll");
-        void letter.offsetWidth;
-        letter.classList.add("unroll");
-        document.getElementById("login").style.display = "none";
+    let letter = document.getElementById("letter");
+
+    letter.style.display = "block";
+
+    letter.classList.remove("unroll");
+    void letter.offsetWidth;
+    letter.classList.add("unroll");
+
+    document.getElementById("login").style.display = "none";
+
+    let music = document.getElementById("bgm");
+    music.play();
+}
     } else {
         alert("Wrong password!");
     }
